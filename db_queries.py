@@ -1,7 +1,6 @@
 import sqlalchemy as sq
 from sqlalchemy.orm import sessionmaker
-from models import Publisher, Shop, Book, Stock, Sale
-from tabulate import tabulate
+from models import Publisher, Book, Stock, Sale
 
 
 def publisher_query():
