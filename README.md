@@ -1,3 +1,4 @@
 *db_queries.py* result:
 
-![image](https://github.com/user-attachments/assets/2bbe96d1-357a-436b-ae7d-7740f90da412)
+![image](https://github.com/user-attachments/assets/da3d4df0-07d2-4ae3-bcf7-bb30d87e2877)
+
