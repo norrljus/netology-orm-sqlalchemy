@@ -1,5 +1,6 @@
 import sqlalchemy as sq
 from sqlalchemy.orm import declarative_base, relationship
+import db_connect
 
 Base = declarative_base()
 
@@ -52,6 +53,7 @@ class Sale(Base):
     stock = relationship(Stock, backref="sales")
 
 
-def create_tables(engine):
+if __name__ == "__main__":
+    engine = db_connect.give_engine()
     Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)

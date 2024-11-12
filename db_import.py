@@ -1,19 +1,9 @@
 import json
-import sqlalchemy as sq
-from sqlalchemy.orm import sessionmaker
-from models import create_tables, Publisher, Shop, Book, Stock, Sale
+from models import Publisher, Shop, Book, Stock, Sale
+import db_connect
 
 if __name__ == "__main__":
-    username = 'postgres'
-    password = '1111'
-    port = '5432'
-    dbname = 'bookstore'
-
-    engine = sq.create_engine(f'postgresql://{username}:{password}@localhost:{port}/{dbname}')
-    create_tables(engine)
-    Session = sessionmaker(bind=engine)
-
-    session = Session()
+    session = db_connect.make_session()
 
     with open('tests_data.json', 'r') as file:
         data = json.load(file)
